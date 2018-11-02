@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/jcolag/LittleScuttlers/issues"
   },
-  "homepage": "https://github.com/jcolag/LittleScuttlers#readme"
+  "homepage": "https://github.com/jcolag/LittleScuttlers#readme",
+  "dependencies": {
+    "scuttlebot": "^13.0.3"
+  }
 }
