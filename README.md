@@ -15,3 +15,13 @@ Fourth, you need to run a Scuttlebutt instance.  If you have [Patchwork](https:/
 
 Fifth, run the scripts with `node whatever-script-you-want.js`.
 
+## Export
+
+The simple project is `export.js`, which exports the current user's Scuttlebutt content into a JSON file.
+
+If you run it as `node export.js`, it puts the results in a file named `scuttlebutt.json`.  But, you can also run it with `node export.js filename.json` to name the output file to whatever you type instead of `filename`.
+
+The flow of the program, if you want to tinker, is to create a Secure Scuttlebutt client (`ssbClient`).  If that works, get the identification for the current user.  If _that_ works, get the user's stream of data, limited to those posted by the current user.  The contents of that stream are then converted to a JSON file.
+
+Note that the script does _not_ currently pick up private messages, because they're not part of the stream.
+
