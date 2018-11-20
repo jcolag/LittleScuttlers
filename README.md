@@ -25,3 +25,16 @@ The flow of the program, if you want to tinker, is to create a Secure Scuttlebut
 
 Note that the script does _not_ currently pick up private messages, because they're not part of the stream.
 
+## Blocks
+
+Unlike the export tool, the blocking tool is a bit more complex, conceptually.
+
+One problem that you often see in distributed networks is that there aren't any real moderation tools.  The result is that you don't have any community "curation" or "cultivation," so the existing community ends up being flooded by spammers, trolls, terrorists, and other bad actors.  Worse, the experienced members of the community are blissfully unaware of the problem, because they will inevitably have blocked the earliest bad actors and the routes of access to them.
+
+In Scuttlebutt, this would come in the form of (and several people already do this) no longer contacting the "pubs," the centralized public users that people use to bridge to larger networks.
+
+The `blocks.js` script attempts to democratize the solution to this problem, hopefully eventually allowing new users to build on the experience of older users, instead of being left to fend for themselves in an increasingly-fouled environment.  In particular, it browses the network's history looking for people who have been repeatedly blocked by others.  This gives a new user a list of candidates to ignore without ever encountering them.
+
+Of course, this is a heavy-handed approach that isn't particularly inclusive.  That is, the script doesn't currently distinguish between someone who has been blocked for trying to scam people out of money, spreading hate speech, or making controversial but important points.  The next steps on this are to use some network analysis to assume that the people you follow will have better taste than the people you block, so that you'll be less likely to block someone you might want to talk to.
+
+
