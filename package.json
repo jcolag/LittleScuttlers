@@ -22,6 +22,6 @@
   },
   "homepage": "https://github.com/jcolag/LittleScuttlers#readme",
   "dependencies": {
-    "scuttlebot": "^13.0.3"
+    "scuttlebot": "^13.2.2"
   }
 }
